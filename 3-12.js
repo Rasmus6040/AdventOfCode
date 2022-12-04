@@ -39,7 +39,6 @@ for(let j = 0; j < todayArr.length-1; j += 3){
             if((todayArr[j+2].split(todayArr[j+1][i])).length > 1){
                 sum += getNumberOfChar(todayArr[j+1][i]); break1 = true; break;
             }
-            if(break1) break;
         }
     }
     if(!break1) console.log(j + " ??? no match")
@@ -48,8 +47,6 @@ for(let j = 0; j < todayArr.length-1; j += 3){
 
 
 function getNumberOfChar(char){
-    console.log(char);
-    count++;
     if(char.charCodeAt(0) < 97){
         return 27+char.charCodeAt(0)-65
     }else{
